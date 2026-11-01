@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img"
+  aria-label="Psychomanteum: four low-resolution screens show a waving figure as the camera sees it, as two lagging eyes see it, and as the mirror predicts it ahead of time.">
+  <title>Psychomanteum</title>
+  <style>
+    .display { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+    .body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .lbl { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.08em; }
+    .fig { animation: walk 4s steps(9, jump-none) infinite alternate; }
+    .arm { animation: wave 1s steps(2, jump-none) infinite; }
+    .lag1 { animation-delay: -7.7s; }   /* 0.3 s behind the camera */
+    .lag2 { animation-delay: -7.4s; }   /* 0.6 s behind */
+    .ahead { animation-delay: -0.5s; }  /* 0.5 s ahead */
+    .ahead-half { animation-delay: -0.25s; }
+    .dust { animation: drift 7s ease-in-out infinite alternate; }
+    .d2 { animation-delay: -2.3s; } .d3 { animation-delay: -4.1s; } .d4 { animation-delay: -5.6s; }
+    @keyframes walk { from { transform: translateX(10px); } to { transform: translateX(100px); } }
+    @keyframes wave { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    @keyframes drift { from { opacity: 0.15; transform: translateY(0); } to { opacity: 0.6; transform: translateY(-14px); } }
+    @media (prefers-reduced-motion: reduce) { .fig, .arm, .dust { animation: none; } .lag1 { transform: translateX(40px); } .lag2 { transform: translateX(25px); } .now { transform: translateX(55px); } .ahead { transform: translateX(80px); } .ahead-half { transform: translateX(68px); } }
+  </style>
+  <defs>
+    <clipPath id="clip"><rect width="160" height="90"/></clipPath>
+    <pattern id="cells" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#f7f4fb" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <pattern id="floor" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#d9d1e6" stroke-width="1"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="320" rx="18" fill="#f7f4fb"/>
+  <rect x="0" y="252" width="1200" height="68" fill="url(#floor)" opacity="0.6"/>
+  <rect width="1200" height="320" rx="18" fill="none" stroke="#d9d1e6"/>
+
+  <g class="dust" fill="#6b3fb8"><circle cx="520" cy="60" r="2"/><circle cx="1130" cy="250" r="1.6"/></g>
+  <g class="dust d2" fill="#6b3fb8"><circle cx="470" cy="270" r="1.8"/><circle cx="900" cy="40" r="1.4"/></g>
+  <g class="dust d3" fill="#6b3fb8"><circle cx="1160" cy="110" r="2.2"/><circle cx="60" cy="290" r="1.5"/></g>
+  <g class="dust d4" fill="#6b3fb8"><circle cx="700" cy="275" r="1.6"/><circle cx="380" cy="30" r="1.3"/></g>
+
+  <text x="56" y="122" class="display" font-size="54" fill="#1a1522">Psychomanteum</text>
+  <text x="58" y="160" class="body" font-size="20" fill="#4a4257">A webcam mirror that shows the next frame</text>
+  <text x="58" y="196" class="lbl" fill="#7d7390">TWO LAGGING EYES · PREDICTIVE CODING</text>
+  <text x="58" y="216" class="lbl" fill="#7d7390">A CELLULAR AUTOMATON · 100 MS TO 1 S AHEAD</text>
+  <text x="58" y="236" class="lbl" fill="#7d7390">EVERY NUMBER IN EXPERIMENTS.MD</text>
+
+  <g transform="translate(478 92)">
+    <rect x="-4" y="-4" width="168" height="98" rx="6" fill="#d9d1e6"/>
+    <rect width="160" height="90" fill="#e3dcee"/>
+    <g clip-path="url(#clip)"><g class="fig now" fill="#3a3344" opacity="1">
+      <rect x="20" y="10" width="20" height="20"/>
+      <rect x="10" y="30" width="40" height="40"/>
+      <rect x="10" y="70" width="10" height="20"/><rect x="40" y="70" width="10" height="20"/>
+      <rect class="arm" x="50" y="20" width="10" height="30"/>
+    </g><rect width="160" height="90" fill="url(#cells)"/></g>
+    <text x="80" y="118" class="lbl" text-anchor="middle" fill="#3a3344">CAMERA · NOW</text>
+  </g>
+  <g transform="translate(658 92)">
+    <rect x="-4" y="-4" width="168" height="98" rx="6" fill="#d9d1e6"/>
+    <rect width="160" height="90" fill="#e3dcee"/>
+    <g clip-path="url(#clip)"><g class="fig lag1" fill="#c43f47" opacity="1">
+      <rect x="20" y="10" width="20" height="20"/>
+      <rect x="10" y="30" width="40" height="40"/>
+      <rect x="10" y="70" width="10" height="20"/><rect x="40" y="70" width="10" height="20"/>
+      <rect class="arm" x="50" y="20" width="10" height="30"/>
+    </g><rect width="160" height="90" filter="url(#grain)" opacity="0.14"/><rect width="160" height="90" fill="url(#cells)"/></g>
+    <text x="80" y="118" class="lbl" text-anchor="middle" fill="#c43f47">LEFT EYE · LAGS</text>
+  </g>
+  <g transform="translate(838 92)">
+    <rect x="-4" y="-4" width="168" height="98" rx="6" fill="#d9d1e6"/>
+    <rect width="160" height="90" fill="#e3dcee"/>
+    <g clip-path="url(#clip)"><g class="fig lag2" fill="#2f66b3" opacity="1">
+      <rect x="20" y="10" width="20" height="20"/>
+      <rect x="10" y="30" width="40" height="40"/>
+      <rect x="10" y="70" width="10" height="20"/><rect x="40" y="70" width="10" height="20"/>
+      <rect class="arm" x="50" y="20" width="10" height="30"/>
+    </g><rect width="160" height="90" filter="url(#grain)" opacity="0.14"/><rect width="160" height="90" fill="url(#cells)"/></g>
+    <text x="80" y="118" class="lbl" text-anchor="middle" fill="#2f66b3">RIGHT EYE · LAGS MORE</text>
+  </g>
+  <g transform="translate(1018 92)">
+    <rect x="-4" y="-4" width="168" height="98" rx="6" fill="#d9d1e6"/>
+    <rect width="160" height="90" fill="#e3dcee"/>
+    <g clip-path="url(#clip)"><g class="fig ahead-half" fill="#6b3fb8" opacity="0.35">
+      <rect x="20" y="10" width="20" height="20"/>
+      <rect x="10" y="30" width="40" height="40"/>
+      <rect x="10" y="70" width="10" height="20"/><rect x="40" y="70" width="10" height="20"/>
+      <rect class="arm" x="50" y="20" width="10" height="30"/>
+    </g><g class="fig ahead" fill="#6b3fb8" opacity="1">
+      <rect x="20" y="10" width="20" height="20"/>
+      <rect x="10" y="30" width="40" height="40"/>
+      <rect x="10" y="70" width="10" height="20"/><rect x="40" y="70" width="10" height="20"/>
+      <rect class="arm" x="50" y="20" width="10" height="30"/>
+    </g><rect width="160" height="90" fill="url(#cells)"/></g>
+    <text x="80" y="118" class="lbl" text-anchor="middle" fill="#6b3fb8">PREDICTION · AHEAD</text>
+  </g>
+</svg>
