@@ -38,6 +38,14 @@ last frame). Errors in `mantis.py` / stats output are MSE x1000.
   **-> E35: refuted.** 14 extra features add <= +0.005 to a linear gate. A 32-hidden MLP with
   cross-entropy on the *original* 7 features gives +0.186 / +0.179 (nonlinearity, not features);
   shipped as the live gate.
+- **(E36, testing)** Matched comparison of the two systems (same held-out frames, grey 160x90,
+  same copy-the-frame baseline, horizons 133 / 533 / 1000 ms): the eye system (clean eyes, full
+  live mix, online) beats the lineage automaton by 0.05-0.1 skill at 533 ms, mainly because it
+  measures motion with explicit optical flow instead of learning it; the gap closes or reverses
+  at 1 s, where flow extrapolation falls apart.
+  **-> E36: supported.** 533 ms: eye system +0.225 vs automaton +0.130 (gap 0.095). 1 s: the
+  automaton's gate ties the eye system (+0.188 vs +0.187). The eye system's advantage is all in
+  motion; it loses to copying when still at every horizon.
 
 ---
 
@@ -1299,4 +1307,66 @@ as `state/nca_gate_linear_E32.npz`. Live vs offline weights on E12 frames 26500 
 max |difference| 0.043 (linear gate: 0.004 - the MLP amplifies the cv2.remap vs grid_sample
 interpolation differences), means agree to 0.005. Replay test, GPU free: 58 ms/frame in gate mode,
 571 frames, no errors.
+
+## E36 - The eye system vs the automaton on a matched test (2026-11-01)
+
+**Question:** the two systems were scored on different baselines, horizons, resolutions and
+targets. On the same held-out frames, in grey at 160x90, against the same copy-the-current-frame
+baseline and at matched horizons, which is better, and where?
+
+**Setup:** `results/matched_eval.py` (`results/matched/`). Predictions made from frame 23451 on
+(the held-out stretch with a full lineage ensemble), scored as MSE of luma over whole 8x8 patches
+(88 of 90 rows), identical pixels for both. Horizons 4 / 16 / 30 frames = 133 / 533 / 1000 ms
+(the lineage model's steps 2 / 8 / 15; horizon 30 is above the eye system's live clamp but
+nothing in its pipeline limits it). **Eye system:** `psychomanteum.py` pipeline with clean eyes
+at 160x90 (no noise, no delay - its input is the current frame, as the automaton's), the full live
+mix (E17/E18 sources, flow smoothing 0 as E20, lead 2), learning online from frame 0 as always;
+blur 6 and 12 (6 was tuned at 80x45), chosen on half 1 of the predictions. **Automaton:** the
+lineage model's newest guess at each horizon; the same guess blended with copying by the eye
+system's own `PrecisionMixer` (online, updated when each target arrives); and at 1 s the live gate
+(E35). The eye system's input frames pass through a 640 -> 320 -> 160 double resize (its camera
+path) where the automaton's are resized once; the targets are identical.
+
+**Result (half 2, 2902 predictions per horizon; q = quintiles of copy error):**
+
+| horizon | system | skill | q1 (still) | q2 | q3 | q4 | q5 | better than copy |
+|---|---|---|---|---|---|---|---|---|
+| 133 ms | eye system (blur 12) | **+0.346** | -0.122 | +0.199 | +0.366 | +0.411 | +0.332 | 79.7% |
+| | automaton, newest | +0.082 | +0.016 | +0.103 | +0.169 | +0.127 | +0.062 | 85.7% |
+| | automaton + copy mixer | +0.051 | +0.032 | +0.080 | +0.114 | +0.079 | +0.038 | 92.3% |
+| 533 ms | eye system (blur 12) | **+0.225** | -0.147 | +0.116 | +0.248 | +0.232 | +0.229 | 79.8% |
+| | automaton, newest | +0.130 | -0.001 | +0.102 | +0.192 | +0.135 | +0.119 | 85.8% |
+| | automaton + copy mixer | +0.096 | +0.048 | +0.108 | +0.143 | +0.101 | +0.084 | 94.9% |
+| 1 s | eye system (blur 12) | +0.187 | -0.175 | +0.101 | +0.184 | +0.205 | +0.196 | 76.8% |
+| | automaton, newest | +0.143 | -0.002 | +0.120 | +0.160 | +0.159 | +0.137 | 88.1% |
+| | automaton + copy mixer | +0.107 | +0.053 | +0.112 | +0.124 | +0.121 | +0.097 | 96.4% |
+| | **automaton, live gate** | **+0.188** | +0.002 | +0.121 | +0.196 | +0.211 | +0.187 | 87.6% |
+
+Half 1 agrees within 0.01 everywhere. Blur 6 vs 12: within 0.006. Whole-run eye-system skill:
++0.353 / +0.225 / +0.182.
+
+**Conclusions:**
+- **Prediction confirmed on both counts.** At 533 ms the eye system leads by 0.095 (inside the
+  predicted 0.05-0.1); at 1 s the gap closes: the automaton's gate ties the eye system (+0.188 vs
+  +0.187), and the raw automaton trails by 0.044.
+- **At 133 ms the eye system is far ahead (+0.346 vs +0.082).** Explicit optical-flow extrapolation
+  is very strong at short horizons; the automaton, which has to learn motion through a 3x3 rule,
+  is weakest there. The automaton's skill *rises* with horizon on this baseline because copying
+  degrades faster than its guess; the eye system's falls as flow extrapolation stops holding.
+- **The eye system's advantage is entirely in motion.** When still it loses to copying at every
+  horizon (-0.12 to -0.18, the unsolved E20 problem) and it beats copying on only ~78% of frames;
+  the automaton is about even when still and beats copying on 86-88%. Different failure modes:
+  the eye system over-commits, the automaton under-commits (E25).
+- **The eye system's online precision mixer does not transfer to the automaton:** blending the
+  automaton's guess with copying lowers skill at every horizon (-0.03 to -0.04), even at 133 ms
+  where the feedback lag is 4 frames, because that guess already behaves like copying when still,
+  so the blend only dilutes it in motion. The eye system benefits from the same mixer because its
+  own sources (flow pushes, blur) are the ones that need a fallback.
+- Overall: short horizons belong to measured motion; at a second the learned automaton with a
+  gate is at parity, with the better stillness behaviour.
+
+**Caveats:** one recording, one person; the eye system adapts online through the held-out
+stretch (that is the system) while the automaton and gate are frozen; blur chosen on half 1 of
+the same stretch; the eye system's 100 ms flagship (horizon 3) sits between the tested 133 ms
+and the untested 66 ms step; grey-only scoring (the eye system cannot predict colour).
 

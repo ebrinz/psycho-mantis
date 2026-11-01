@@ -1,0 +1,23 @@
+E36 matched test: held-out predictions from frame 23451 - grey luma, 160x90, 88 rows, skill vs copying the current frame
+
+--- 133 ms ahead (4 frames): 5803 predictions, half 2 = 2902
+system                                          half 1  half 2   q1 still      q2      q3      q4      q5   better
+automaton, newest guess                         +0.085  +0.082    +0.016  +0.103  +0.169  +0.127  +0.062    85.7%
+automaton + copy, online precision mixer        +0.054  +0.051    +0.032  +0.080  +0.114  +0.079  +0.038    92.3%
+eye system, blur 12 (chosen on half 1)          +0.362  +0.346    -0.122  +0.199  +0.366  +0.411  +0.332    79.7%
+eye system, blur 6                              +0.360  +0.344    -0.129  +0.195  +0.365  +0.414  +0.329    79.5%
+
+--- 533 ms ahead (16 frames): 5803 predictions, half 2 = 2902
+system                                          half 1  half 2   q1 still      q2      q3      q4      q5   better
+automaton, newest guess                         +0.129  +0.130    -0.001  +0.102  +0.192  +0.135  +0.119    85.8%
+automaton + copy, online precision mixer        +0.095  +0.096    +0.048  +0.108  +0.143  +0.101  +0.084    94.9%
+eye system, blur 12 (chosen on half 1)          +0.225  +0.225    -0.147  +0.116  +0.248  +0.232  +0.229    79.8%
+eye system, blur 6                              +0.220  +0.221    -0.141  +0.131  +0.258  +0.231  +0.221    80.4%
+
+--- 1000 ms ahead (30 frames): 5803 predictions, half 2 = 2902
+system                                          half 1  half 2   q1 still      q2      q3      q4      q5   better
+automaton, newest guess                         +0.136  +0.143    -0.002  +0.120  +0.160  +0.159  +0.137    88.1%
+automaton + copy, online precision mixer        +0.101  +0.107    +0.053  +0.112  +0.124  +0.121  +0.097    96.4%
+automaton, live gate (E35)                      +0.187  +0.188    +0.002  +0.121  +0.196  +0.211  +0.187    87.6%
+eye system, blur 12 (chosen on half 1)          +0.176  +0.187    -0.175  +0.101  +0.184  +0.205  +0.196    76.8%
+eye system, blur 6                              +0.170  +0.181    -0.158  +0.126  +0.192  +0.199  +0.183    78.4%

@@ -16,7 +16,8 @@ not work.
 
 *Skill* is 1 − (prediction error / baseline error): how much better the prediction is than the
 baseline, on frames the system had not seen. The eye mirror's baseline is averaging the two eyes;
-the automaton's is copying the current camera frame. The two are not directly comparable.
+the automaton's is copying the current camera frame, so the two are not directly comparable
+except in the matched test at the end of this list.
 
 - **Two crude eyes beat one, and prediction beats averaging them.** With two 80×45 eyes, each
   lagging by its own wandering 0–4 frames plus noise, a precision-weighted blend of a learned
@@ -48,6 +49,12 @@ the automaton's is copying the current camera frame. The two are not directly co
 - **What did not pay:** live learning (E22), an automaton that never resets its state (E24), a
   graph automaton on superpixels (E26–E28), richer gate features (E35). Under most of the dead
   ends sits one problem: a predictor that minimises error **hedges** when the future is uncertain.
+- **Head to head, measured motion wins early and the learned automaton catches up.** On the same
+  held-out frames, in grey at 160×90, against the same copy-the-frame baseline, the eye system
+  leads by a wide margin at 133 ms (+0.35 vs +0.08) and by 0.1 at 533 ms (+0.23 vs +0.13); at one
+  second the automaton's gate ties it (+0.188 vs +0.187). The two fail in opposite ways: the eye
+  system's advantage is entirely in motion and it loses to copying whenever the person is still,
+  while the automaton under-commits in motion and never loses much when still. *(E36)*
 
 Everything comes from one person and two rooms, one training recording and one seed. Treat the
 numbers as a careful single case, not a benchmark.
