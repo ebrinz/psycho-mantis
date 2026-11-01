@@ -1,0 +1,12 @@
+base|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 6
+lead0|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 6 --reach 15
+b0|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 0
+b2|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 2
+b4|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 4
+s0|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6
+s0.3|--fractions 0.25 0.5 1 --flow-smoothing 0.3 --blur 6
+s0.7|--fractions 0.25 0.5 1 --flow-smoothing 0.7 --blur 6
+sh2|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 6 --sharpness 2
+sh3|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 6 --sharpness 3
+f.5-1|--fractions 0.5 1 --flow-smoothing 0.5 --blur 6
+f.1-1|--fractions 0.1 0.25 0.5 1 --flow-smoothing 0.5 --blur 6

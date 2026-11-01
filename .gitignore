@@ -1,0 +1,19 @@
+# footage of people: never commit
+recordings/
+data/
+.playwright-mcp/
+
+# large derived data (per-frame errors, features, cached frames); regenerate with the scripts
+results/*.npz
+results/*.npy
+
+# runtime state and learned weights (small, but session-specific); keep gate/model checkpoints out by default
+state/stats.jsonl
+state/control.json
+state/*_live.pt
+
+# local secrets
+certs/key.pem
+
+__pycache__/
+.DS_Store

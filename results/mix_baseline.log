@@ -1,0 +1,8 @@
+flows for 5821 frames in 97s
+held-out, every frame: 5803 targets (3.2 min), 1 s ahead, 160x90; 115s total
+source     skill  half 1  half 2   q1 (still)      q2      q3      q4      q5   better  sharpness
+copy      +0.000  +0.000  +0.000       +0.000  +0.000  +0.000  +0.000  +0.000     0.0%      1.000
+nca       +0.131  +0.127  +0.135       -0.057  +0.061  +0.148  +0.143  +0.130    82.2%      0.943
+nca10     +0.151  +0.153  +0.150       -0.170  -0.077  +0.083  +0.153  +0.185    64.7%      0.912
+rigid     +0.048  +0.046  +0.050       -0.004  +0.058  +0.067  +0.051  +0.044    81.5%      0.980
+saved results/mix_baseline.npz: per-frame MSE, sharpness and per-patch squared errors (5803, 4, 11, 20)

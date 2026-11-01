@@ -1,0 +1,35 @@
+fitted lin expected in 11s
+fitted lin relative in 10s
+fitted lin xent in 9s
+fitted mlp relative in 26s
+fitted mlp+ctx relative in 29s
+fitted B mlp relative in 26s
+
+surrogate on half 2 (patch errors): gate                    soft      q1      pick      q1
+                                             true oracle pick                        +0.298  +0.201
+                                             lin expected          +0.153  -0.254    +0.154  -0.260
+                                             lin relative          +0.126  +0.003    +0.126  +0.003
+                                             lin xent              +0.114  -0.088    +0.139  -0.173
+                                             mlp relative          +0.135  +0.010    +0.135  +0.011
+                                             mlp+ctx relative      +0.141  +0.013    +0.141  +0.014
+                                             B mlp relative        +0.123  +0.010    +0.124  +0.010
+
+phase 1b: gates fitted on half 1, reported on half 2 (2902 targets); 299s
+variant                      skill   q1 (still)      q2      q3      q4      q5   better   sharp
+(source) nca                +0.135       -0.000  +0.114  +0.153  +0.151  +0.128    88.2%   0.936
+(source) nca10              +0.150       -0.275  -0.048  +0.129  +0.181  +0.174    67.3%   0.903
+(E30) A fixed               +0.150       +0.048  +0.126  +0.163  +0.171  +0.143    94.2%     nan
+(E30) C lagged              +0.153       -0.049  +0.058  +0.146  +0.173  +0.161    85.4%     nan
+(E30) C oracle (running)    +0.250       +0.119  +0.191  +0.260  +0.278  +0.244    97.6%     nan
+true oracle pick            +0.293       +0.194  +0.274  +0.311  +0.326  +0.277   100.0%   0.925
+lin expected soft           +0.166       -0.247  -0.021  +0.150  +0.199  +0.185    70.6%   0.904
+lin expected pick           +0.161       -0.263  -0.029  +0.145  +0.193  +0.182    69.5%   0.904
+lin relative soft           +0.133       +0.025  +0.096  +0.136  +0.152  +0.131    91.7%   0.953
+lin relative pick           +0.132       +0.019  +0.092  +0.134  +0.151  +0.130    90.5%   0.954
+lin xent soft               +0.174       +0.022  +0.120  +0.178  +0.200  +0.170    90.4%   0.927
+lin xent pick               +0.157       -0.162  +0.044  +0.157  +0.186  +0.164    75.1%   0.911
+mlp relative soft           +0.146       +0.026  +0.100  +0.147  +0.166  +0.145    91.0%   0.949
+mlp relative pick           +0.145       +0.023  +0.098  +0.145  +0.165  +0.143    90.5%   0.950
+mlp+ctx relative soft       +0.150       +0.026  +0.102  +0.150  +0.168  +0.150    90.9%   0.948
+mlp+ctx relative pick       +0.149       +0.023  +0.100  +0.149  +0.166  +0.149    90.4%   0.949
+B mlp relative soft         +0.123       +0.023  +0.094  +0.127  +0.140  +0.120    91.5%   0.960

@@ -1,0 +1,28 @@
+min  1: skill vs copy-avg  model +0.034  precision +0.039
+min  2: skill vs copy-avg  model +0.018  precision +0.028
+min  3: skill vs copy-avg  model +0.018  precision +0.024
+min  4: skill vs copy-avg  model +0.030  precision +0.034
+min  5: skill vs copy-avg  model +0.008  precision +0.028
+min  6: skill vs copy-avg  model -0.017  precision +0.048
+min  7: skill vs copy-avg  model +0.002  precision +0.039
+min  8: skill vs copy-avg  model -0.048  precision +0.032
+min  9: skill vs copy-avg  model +0.000  precision +0.049
+min 10: skill vs copy-avg  model -0.006  precision +0.034
+min 11: skill vs copy-avg  model +0.016  precision +0.036
+min 12: skill vs copy-avg  model +0.049  precision +0.047
+min 13: skill vs copy-avg  model +0.043  precision +0.049
+min 14: skill vs copy-avg  model +0.094  precision +0.071
+min 15: skill vs copy-avg  model +0.039  precision +0.041
+min 16: skill vs copy-avg  model +0.063  precision +0.053
+
+both eyes, horizon 3, rate 1.0, 29284 frames in 87s
+MSE x1000: model 2.532 | precision 2.474 | copy_avg 2.577 | copy_left 3.012 | copy_right 3.012
+skill vs copy-avg (summed MSE): model +0.018  precision +0.040
+frames where better than copy-avg: model 47.6%  precision 79.9%
+
+by motion quintile (1 = stillest):
+  1: motion   0.015  model +0.114  precision +0.142
+  2: motion   0.076  model -0.195  precision +0.011
+  3: motion   0.320  model -0.101  precision +0.021
+  4: motion   1.252  model +0.000  precision +0.038
+  5: motion   6.364  model +0.043  precision +0.040

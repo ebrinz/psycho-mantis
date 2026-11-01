@@ -1,0 +1,41 @@
+pass 1 old: 5767 targets, 142s
+pass 1 new: 8955 targets, 319s
+fitted lin xent base (E32) (7 features) in 5s
+fitted lin xent +trend (9 features) in 4s
+fitted lin xent +curve (14 features) in 4s
+fitted lin xent +lagged (18 features) in 4s
+fitted lin xent +structure (21 features) in 5s
+fitted lin xent all + ctx (42 features) in 6s
+fitted mlp32 xent all (21 features) in 55s
+fitted lin soft all (21 features) in 5s
+fitted lin xent base, floor 1e-6 (7 features) in 3s
+fitted lin xent all, floor 1e-6 (21 features) in 5s
+fitted mlp32 xent all, floor 1e-6 (21 features) in 54s
+
+old room (held-out half 2), 2884 targets, gates fitted on old-room half 1; 554s
+gate                       skill   q1 (still)      q2      q3      q4      q5   better   sharp
+lin xent base (E32)       +0.174       +0.022  +0.119  +0.179  +0.203  +0.170    90.4%   0.927
+lin xent +trend           +0.175       +0.021  +0.118  +0.179  +0.203  +0.171    90.3%   0.927
+lin xent +curve           +0.175       +0.021  +0.117  +0.179  +0.203  +0.171    90.4%   0.927
+lin xent +lagged          +0.175       +0.022  +0.119  +0.179  +0.204  +0.171    90.5%   0.926
+lin xent +structure       +0.176       +0.019  +0.115  +0.178  +0.205  +0.173    90.5%   0.927
+lin xent all + ctx        +0.179       +0.021  +0.115  +0.178  +0.207  +0.177    90.5%   0.927
+mlp32 xent all            +0.189       +0.015  +0.122  +0.195  +0.216  +0.186    90.3%   0.921
+lin soft all              +0.151       +0.051  +0.123  +0.159  +0.173  +0.143    94.7%   0.942
+lin xent base, floor 1e-6  +0.168       +0.017  +0.124  +0.180  +0.196  +0.161    90.4%   0.927
+lin xent all, floor 1e-6  +0.173       +0.019  +0.120  +0.179  +0.201  +0.167    90.6%   0.927
+mlp32 xent all, floor 1e-6  +0.188       +0.016  +0.122  +0.194  +0.215  +0.186    90.3%   0.921
+
+new room (clip_20261101_110042.mp4), 8955 targets, gates fitted on old-room half 1; 695s
+gate                       skill   q1 (still)      q2      q3      q4      q5   better   sharp
+lin xent base (E32)       +0.169       +0.046  +0.170  +0.180  +0.171  +0.171    91.0%   0.857
+lin xent +trend           +0.170       +0.046  +0.170  +0.180  +0.171  +0.172    90.9%   0.856
+lin xent +curve           +0.169       +0.045  +0.170  +0.180  +0.171  +0.172    91.0%   0.856
+lin xent +lagged          +0.169       +0.045  +0.170  +0.180  +0.171  +0.171    91.1%   0.856
+lin xent +structure       +0.170       +0.041  +0.167  +0.180  +0.172  +0.173    91.0%   0.856
+lin xent all + ctx        +0.172       +0.029  +0.167  +0.182  +0.175  +0.177    90.1%   0.854
+mlp32 xent all            +0.181       +0.026  +0.174  +0.188  +0.185  +0.187    91.1%   0.844
+lin soft all              +0.150       +0.092  +0.164  +0.160  +0.149  +0.146    95.1%   0.889
+lin xent base, floor 1e-6  +0.164       +0.059  +0.173  +0.175  +0.166  +0.163    91.3%   0.861
+lin xent all, floor 1e-6  +0.167       +0.055  +0.171  +0.177  +0.168  +0.168    91.7%   0.860
+mlp32 xent all, floor 1e-6  +0.181       +0.029  +0.175  +0.189  +0.185  +0.187    91.3%   0.844

@@ -1,0 +1,8 @@
+min  1: model 4.473  copy-avg 4.569  copy-L 5.192  copy-R 5.114  skill vs copy-avg +0.021
+min  2: model 2.078  copy-avg 2.099  copy-L 2.510  copy-R 2.408  skill vs copy-avg +0.010
+min  3: model 1.249  copy-avg 1.257  copy-L 1.498  copy-R 1.584  skill vs copy-avg +0.007
+
+both eyes, horizon 3, rate 0.2, 5400 frames in 16s
+MSE x1000: model 2.600 | copy-avg 2.642 | best single eye 3.035
+skill vs copy-avg +0.016 | vs best single eye +0.144
+last 3 min skill vs copy-avg +0.016

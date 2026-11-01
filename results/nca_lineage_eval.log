@@ -1,0 +1,9 @@
+lineage model, held-out, 579 frames
+skill by horizon: 0.13s +0.081  0.27s +0.105  0.40s +0.116  0.53s +0.126  0.67s +0.129  0.80s +0.133  0.93s +0.134  1.00s +0.133  1.07s +0.133  1.20s +0.133  1.33s +0.131  1.47s +0.133  1.60s +0.132
+at 1 s: lineage +0.133  vs warp model (E21) +0.117  (same frames)
+1 s target from 10 source frames (newest to 0.60 s older); scored on the second half (290 targets); weights by age: 0.11 0.11 0.10 0.10 0.10 0.10 0.10 0.10 0.09 0.09
+  newest only        skill +0.138
+  plain average      skill +0.148
+  precision-weighted skill +0.152
+  ensemble spread      corr with actual error 0.425; error in its top 10% pixels 4.0x the rest
+  motion now (control) corr with actual error 0.303; error in its top 10% pixels 4.0x the rest

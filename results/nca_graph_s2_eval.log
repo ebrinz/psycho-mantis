@@ -1,0 +1,7 @@
+graph NCA on superpixels (motion blur 2 cells), held-out, 292 frames, 1 s ahead (160x90)
+skill: graph +0.044  vs grid warp NCA (E21) +0.113  (same frames); graph better than copying on 76.4% of frames
+  motion quintile 1: graph +0.014  grid -0.038
+  motion quintile 2: graph +0.047  grid +0.069
+  motion quintile 3: graph +0.045  grid +0.142
+  motion quintile 4: graph +0.039  grid +0.116
+  motion quintile 5: graph +0.046  grid +0.112

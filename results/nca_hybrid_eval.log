@@ -1,0 +1,6 @@
+hybrid: lineage NCA motion pulled toward its superpixel average, 292 held-out frames, 1 s ahead
+  alpha 0.00: skill +0.130   by motion quintile -0.056 +0.072 +0.150 +0.134 +0.131
+  alpha 0.25: skill +0.115   by motion quintile -0.012 +0.082 +0.142 +0.117 +0.112
+  alpha 0.50: skill +0.091   by motion quintile +0.014 +0.079 +0.121 +0.092 +0.087
+  alpha 0.75: skill +0.068   by motion quintile +0.025 +0.067 +0.094 +0.067 +0.063
+  alpha 1.00: skill +0.047   by motion quintile +0.022 +0.052 +0.067 +0.045 +0.044

@@ -1,0 +1,734 @@
+{
+  "term": "ghostty",
+  "modes": {
+    "d": true,
+    "t": true,
+    "s": true
+  },
+  "runs": [
+    {
+      "fps": 594.0660259591441,
+      "prep_ms": 0.0076801248724223115,
+      "terminal_ms": 1.674778124106524,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "clean",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 3199.744019274302,
+      "prep_ms": 0.004505099605012219,
+      "terminal_ms": 0.3076291997786029,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "clean",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 14138.232349617489,
+      "prep_ms": 0.00360100093530491,
+      "terminal_ms": 0.06689899892080575,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "clean",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 348.5341416592238,
+      "prep_ms": 0.9397666999575449,
+      "terminal_ms": 1.9286874505269225,
+      "bytes_per_frame": 46681,
+      "res": "160x120",
+      "style": "clean",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 514.1256008856684,
+      "prep_ms": 0.9611135741579346,
+      "terminal_ms": 0.9831019757257309,
+      "bytes_per_frame": 46681,
+      "res": "160x120",
+      "style": "clean",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 960.9273025790692,
+      "prep_ms": 0.95668022549944,
+      "terminal_ms": 0.0835541499327519,
+      "bytes_per_frame": 46681,
+      "res": "160x120",
+      "style": "clean",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 579.7364011563783,
+      "prep_ms": 0.2809676503602532,
+      "terminal_ms": 1.4434468244871823,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "dither",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 1659.736643986342,
+      "prep_ms": 0.2669301245987299,
+      "terminal_ms": 0.3350990000399179,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "dither",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 2966.4422709138244,
+      "prep_ms": 0.2610301751701627,
+      "terminal_ms": 0.07576765037811128,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "dither",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 1557.7461361137684,
+      "prep_ms": 0.3758072754862951,
+      "terminal_ms": 0.2657270992131089,
+      "bytes_per_frame": 3541,
+      "res": "160x120",
+      "style": "dither",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 1146.5274062219285,
+      "prep_ms": 0.397422874084441,
+      "terminal_ms": 0.4742896002426278,
+      "bytes_per_frame": 3541,
+      "res": "160x120",
+      "style": "dither",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 2378.186182286738,
+      "prep_ms": 0.3633103748143185,
+      "terminal_ms": 0.05689789995813044,
+      "bytes_per_frame": 3541,
+      "res": "160x120",
+      "style": "dither",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 621.1718633874186,
+      "prep_ms": 0.1367104247037787,
+      "terminal_ms": 1.47271557507338,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 2602.0208471620385,
+      "prep_ms": 0.11953334960708162,
+      "terminal_ms": 0.26448117605468724,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 5604.890268598397,
+      "prep_ms": 0.11533850029081805,
+      "terminal_ms": 0.06284059982135659,
+      "bytes_per_frame": 57600,
+      "res": "160x120",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 3042.5094873975395,
+      "prep_ms": 0.172803125315113,
+      "terminal_ms": 0.15562292483082274,
+      "bytes_per_frame": 1957,
+      "res": "160x120",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 1745.1975000823036,
+      "prep_ms": 0.19174790031684097,
+      "terminal_ms": 0.3808729499723995,
+      "bytes_per_frame": 1957,
+      "res": "160x120",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 4394.698893169118,
+      "prep_ms": 0.1748520000546705,
+      "terminal_ms": 0.05245000011200318,
+      "bytes_per_frame": 1957,
+      "res": "160x120",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 172.85558664809489,
+      "prep_ms": 0.010947875853162259,
+      "terminal_ms": 5.7736677745197085,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "clean",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 2305.259592912729,
+      "prep_ms": 0.008706175140105188,
+      "terminal_ms": 0.4247562495947932,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "clean",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 9158.383476966948,
+      "prep_ms": 0.009609325388737489,
+      "terminal_ms": 0.09934685003827326,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "clean",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 89.89870950714808,
+      "prep_ms": 4.090043649557629,
+      "terminal_ms": 7.032736449582444,
+      "bytes_per_frame": 183284,
+      "res": "320x240",
+      "style": "clean",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 148.07755957830014,
+      "prep_ms": 4.118562524672598,
+      "terminal_ms": 2.6337894998505362,
+      "bytes_per_frame": 183284,
+      "res": "320x240",
+      "style": "clean",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 238.08384125221409,
+      "prep_ms": 4.076445775172033,
+      "terminal_ms": 0.12322397524258122,
+      "bytes_per_frame": 183284,
+      "res": "320x240",
+      "style": "clean",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 145.8259593997438,
+      "prep_ms": 0.9670531251686043,
+      "terminal_ms": 5.8897874512695125,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "dither",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 696.8747346071433,
+      "prep_ms": 0.9663551500125322,
+      "terminal_ms": 0.46807292455923744,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "dither",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 916.7784716781978,
+      "prep_ms": 0.9397614006957156,
+      "terminal_ms": 0.15058949957165169,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "dither",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 458.48183895136,
+      "prep_ms": 1.4237292003599578,
+      "terminal_ms": 0.7566729496829794,
+      "bytes_per_frame": 11433,
+      "res": "320x240",
+      "style": "dither",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 430.9892010267626,
+      "prep_ms": 1.446503100123664,
+      "terminal_ms": 0.8730896493943874,
+      "bytes_per_frame": 11433,
+      "res": "320x240",
+      "style": "dither",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 659.9965762464929,
+      "prep_ms": 1.4115864749328466,
+      "terminal_ms": 0.10307920001650928,
+      "bytes_per_frame": 11433,
+      "res": "320x240",
+      "style": "dither",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 159.76041305842284,
+      "prep_ms": 0.4240343001583824,
+      "terminal_ms": 5.834580249756982,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 1359.4460258190572,
+      "prep_ms": 0.40985719988384517,
+      "terminal_ms": 0.32536664984945673,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 1959.3316230001487,
+      "prep_ms": 0.40327917486138176,
+      "terminal_ms": 0.10682709980756044,
+      "bytes_per_frame": 230400,
+      "res": "320x240",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 853.219570652291,
+      "prep_ms": 0.7214425746497,
+      "terminal_ms": 0.4502406502069789,
+      "bytes_per_frame": 6397,
+      "res": "320x240",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 729.4206589660106,
+      "prep_ms": 0.7382521995168645,
+      "terminal_ms": 0.6321686745650368,
+      "bytes_per_frame": 6397,
+      "res": "320x240",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 1194.444340624544,
+      "prep_ms": 0.7510072753575514,
+      "terminal_ms": 0.08575829942856217,
+      "bytes_per_frame": 6397,
+      "res": "320x240",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 42.883520050969445,
+      "prep_ms": 0.03471452473604586,
+      "terminal_ms": 23.2833697251408,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "clean",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 1609.7091865838001,
+      "prep_ms": 0.030602074730268214,
+      "terminal_ms": 0.5901707745579188,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "clean",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 4184.118799745787,
+      "prep_ms": 0.030255100136855617,
+      "terminal_ms": 0.20849782522418536,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "clean",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 22.963046235032156,
+      "prep_ms": 16.220156275085174,
+      "terminal_ms": 27.32682805017248,
+      "bytes_per_frame": 722694,
+      "res": "640x480",
+      "style": "clean",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 39.2913799623413,
+      "prep_ms": 16.264964524452807,
+      "terminal_ms": 9.184585425646219,
+      "bytes_per_frame": 722694,
+      "res": "640x480",
+      "style": "clean",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 60.915901029742884,
+      "prep_ms": 16.173522975259402,
+      "terminal_ms": 0.24091977411444532,
+      "bytes_per_frame": 722694,
+      "res": "640x480",
+      "style": "clean",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 35.70176886532164,
+      "prep_ms": 3.8306645497868885,
+      "terminal_ms": 24.178220899739244,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "dither",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 214.1980755274355,
+      "prep_ms": 3.805455174006056,
+      "terminal_ms": 0.8620406257250579,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "dither",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 241.49151145850658,
+      "prep_ms": 3.7611989997458295,
+      "terminal_ms": 0.37871245003771037,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "dither",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 124.68474902827978,
+      "prep_ms": 5.53469157548534,
+      "terminal_ms": 2.4845979494784842,
+      "bytes_per_frame": 38774,
+      "res": "640x480",
+      "style": "dither",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 134.23973118648965,
+      "prep_ms": 5.576303125053528,
+      "terminal_ms": 1.8719666752076591,
+      "bytes_per_frame": 38774,
+      "res": "640x480",
+      "style": "dither",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 176.42949728227057,
+      "prep_ms": 5.469708300552156,
+      "terminal_ms": 0.1974103497559554,
+      "bytes_per_frame": 38774,
+      "res": "640x480",
+      "style": "dither",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 39.47280126616617,
+      "prep_ms": 1.588152000476839,
+      "terminal_ms": 23.744776074272522,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 438.79716873893767,
+      "prep_ms": 1.554168775510334,
+      "terminal_ms": 0.7236635996378027,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 550.493439590224,
+      "prep_ms": 1.5275832260158495,
+      "terminal_ms": 0.2884010244088131,
+      "bytes_per_frame": 921600,
+      "res": "640x480",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 234.2464970345033,
+      "prep_ms": 2.8262677737075137,
+      "terminal_ms": 1.4420082752621965,
+      "bytes_per_frame": 22541,
+      "res": "640x480",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 242.68549703638874,
+      "prep_ms": 2.8309271001489833,
+      "terminal_ms": 1.2886916745628696,
+      "bytes_per_frame": 22541,
+      "res": "640x480",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 344.0180819948981,
+      "prep_ms": 2.7854728748934576,
+      "terminal_ms": 0.12062072528351564,
+      "bytes_per_frame": 22541,
+      "res": "640x480",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 10.336495805418911,
+      "prep_ms": 0.11343252463986919,
+      "terminal_ms": 96.63021228542286,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "clean",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 578.2003966236292,
+      "prep_ms": 0.17677187533990946,
+      "terminal_ms": 1.5515812001467566,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "clean",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 942.9653312799421,
+      "prep_ms": 0.13935414990555728,
+      "terminal_ms": 0.9204646248690551,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "clean",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 5.774380633955089,
+      "prep_ms": 64.04655549886229,
+      "terminal_ms": 109.13028825234505,
+      "bytes_per_frame": 2982313,
+      "res": "1280x960",
+      "style": "clean",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 10.17625105459186,
+      "prep_ms": 63.73026804690848,
+      "terminal_ms": 34.53620223895303,
+      "bytes_per_frame": 3003686,
+      "res": "1280x960",
+      "style": "clean",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 15.618055890546207,
+      "prep_ms": 63.6237929059007,
+      "terminal_ms": 0.40422662505079643,
+      "bytes_per_frame": 2916778,
+      "res": "1280x960",
+      "style": "clean",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 9.004410560309138,
+      "prep_ms": 15.640938578718831,
+      "terminal_ms": 95.41469726268826,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "dither",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 61.312618864468774,
+      "prep_ms": 14.608143800251128,
+      "terminal_ms": 1.7010113499054569,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "dither",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 63.967670739526945,
+      "prep_ms": 14.595966650267655,
+      "terminal_ms": 1.0364207995735342,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "dither",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 34.276881887363594,
+      "prep_ms": 21.04839992534835,
+      "terminal_ms": 8.124882250194787,
+      "bytes_per_frame": 137130,
+      "res": "1280x960",
+      "style": "dither",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 38.570898381441395,
+      "prep_ms": 20.970392700291995,
+      "terminal_ms": 4.955221949785482,
+      "bytes_per_frame": 137130,
+      "res": "1280x960",
+      "style": "dither",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 47.26829855557473,
+      "prep_ms": 20.940656325365126,
+      "terminal_ms": 0.21457174971146742,
+      "bytes_per_frame": 137130,
+      "res": "1280x960",
+      "style": "dither",
+      "zlib": true,
+      "mode": "s"
+    },
+    {
+      "fps": 9.728983358922408,
+      "prep_ms": 5.870860498907859,
+      "terminal_ms": 96.91387280035997,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "d"
+    },
+    {
+      "fps": 137.920849264131,
+      "prep_ms": 5.746734425883915,
+      "terminal_ms": 1.5032708495709812,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "t"
+    },
+    {
+      "fps": 150.33628328411115,
+      "prep_ms": 5.751308399521804,
+      "terminal_ms": 0.9000968248074059,
+      "bytes_per_frame": 3686400,
+      "res": "1280x960",
+      "style": "chunky",
+      "zlib": false,
+      "mode": "s"
+    },
+    {
+      "fps": 64.76387267674146,
+      "prep_ms": 10.608672874332115,
+      "terminal_ms": 4.831643750731018,
+      "bytes_per_frame": 79987,
+      "res": "1280x960",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "d"
+    },
+    {
+      "fps": 72.983033941263,
+      "prep_ms": 10.59580302608083,
+      "terminal_ms": 3.105650024008355,
+      "bytes_per_frame": 79987,
+      "res": "1280x960",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "t"
+    },
+    {
+      "fps": 93.1052642287778,
+      "prep_ms": 10.587880200364452,
+      "terminal_ms": 0.15233959929901175,
+      "bytes_per_frame": 79987,
+      "res": "1280x960",
+      "style": "chunky",
+      "zlib": true,
+      "mode": "s"
+    }
+  ],
+  "layout": {
+    "img_cols": 91,
+    "img_rows": 32
+  }
+}

@@ -1,0 +1,28 @@
+min  1: skill vs copy-avg  model +0.023  precision +0.038  mix3 +0.176
+min  2: skill vs copy-avg  model +0.011  precision +0.033  mix3 +0.153
+min  3: skill vs copy-avg  model +0.005  precision +0.024  mix3 +0.269
+min  4: skill vs copy-avg  model +0.015  precision +0.034  mix3 +0.251
+min  5: skill vs copy-avg  model -0.040  precision +0.013  mix3 +0.113
+min  6: skill vs copy-avg  model -0.025  precision +0.049  mix3 +0.246
+min  7: skill vs copy-avg  model +0.013  precision +0.050  mix3 +0.321
+min  8: skill vs copy-avg  model -0.067  precision +0.024  mix3 +0.174
+min  9: skill vs copy-avg  model +0.013  precision +0.059  mix3 +0.224
+min 10: skill vs copy-avg  model -0.021  precision +0.031  mix3 +0.203
+min 11: skill vs copy-avg  model +0.017  precision +0.041  mix3 +0.247
+min 12: skill vs copy-avg  model +0.038  precision +0.047  mix3 +0.139
+min 13: skill vs copy-avg  model +0.040  precision +0.054  mix3 +0.258
+min 14: skill vs copy-avg  model +0.068  precision +0.064  mix3 +0.262
+min 15: skill vs copy-avg  model +0.049  precision +0.054  mix3 +0.200
+min 16: skill vs copy-avg  model +0.064  precision +0.061  mix3 +0.247
+
+both eyes, horizon 6, rate 1.0, 29284 frames in 141s
+MSE x1000: model 3.800 | precision 3.674 | copy_avg 3.830 | copy_left 4.235 | copy_right 4.294 | eyeflow 5.190 | mix3 3.057
+skill vs copy-avg (summed MSE): model +0.008  precision +0.041  eyeflow -0.355  mix3 +0.202  (reach 8)
+frames where better than copy-avg: model 41.4%  precision 74.1%  mix3 83.2%
+
+by motion quintile (1 = stillest):
+  1: motion   0.039  model -0.277  precision +0.030  eyeflow -6.596  mix3 +0.039
+  2: motion   0.227  model -0.338  precision -0.019  eyeflow -3.269  mix3 +0.045
+  3: motion   0.929  model -0.135  precision +0.011  eyeflow -1.131  mix3 +0.161
+  4: motion   2.974  model +0.002  precision +0.042  eyeflow -0.307  mix3 +0.228
+  5: motion  11.284  model +0.052  precision +0.047  eyeflow +0.015  mix3 +0.210

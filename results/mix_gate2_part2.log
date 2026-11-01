@@ -1,0 +1,24 @@
+fitted lin xent base (E32) (7 features) in 4s
+fitted mlp32 xent base (7 features) in 15s
+fitted mlp32 xent all (21 features) in 55s
+fitted mlp64 xent base (7 features) in 17s
+fitted mlp64 xent all (21 features) in 55s
+fitted mlp32 xent base + ctx (14 features) in 17s
+
+old room (held-out half 2), 2884 targets, gates fitted on old-room half 1; 251s
+gate                       skill   q1 (still)      q2      q3      q4      q5   better   sharp
+lin xent base (E32)       +0.174       +0.022  +0.119  +0.178  +0.202  +0.170    90.4%   0.927
+mlp32 xent base           +0.186       +0.016  +0.117  +0.190  +0.214  +0.184    89.9%   0.922
+mlp32 xent all            +0.189       +0.015  +0.122  +0.195  +0.216  +0.187    90.2%   0.921
+mlp64 xent base           +0.185       +0.021  +0.123  +0.192  +0.213  +0.181    90.5%   0.923
+mlp64 xent all            +0.190       +0.014  +0.121  +0.195  +0.217  +0.189    90.2%   0.920
+mlp32 xent base + ctx     +0.187       +0.021  +0.123  +0.193  +0.214  +0.183    90.7%   0.922
+
+new room (clip_20261101_110042.mp4), 8955 targets, gates fitted on old-room half 1; 394s
+gate                       skill   q1 (still)      q2      q3      q4      q5   better   sharp
+lin xent base (E32)       +0.169       +0.048  +0.170  +0.180  +0.171  +0.171    91.1%   0.857
+mlp32 xent base           +0.179       +0.026  +0.172  +0.188  +0.182  +0.186    90.7%   0.844
+mlp32 xent all            +0.181       +0.027  +0.174  +0.189  +0.185  +0.187    91.2%   0.844
+mlp64 xent base           +0.179       +0.035  +0.175  +0.188  +0.181  +0.183    91.3%   0.847
+mlp64 xent all            +0.182       +0.021  +0.174  +0.190  +0.186  +0.189    91.1%   0.842
+mlp32 xent base + ctx     +0.181       +0.027  +0.176  +0.189  +0.184  +0.187    91.0%   0.845

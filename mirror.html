@@ -1,0 +1,106 @@
+<!doctype html>
+<!--
+Delayed webcam mirror: live feed next to a time-delayed copy of yourself.
+
+Keys:
+  [ / ]  decrease / increase delay by 50ms
+  v      toggle view: side-by-side / delayed only
+  r      start / stop recording the raw camera feed (downloads when stopped)
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Delayed Mirror</title>
+<style>
+  body { margin: 0; background: #000; color: #fff; font: 14px system-ui; display: grid; place-items: center; height: 100vh; }
+  canvas { max-width: 100vw; max-height: 100vh; }
+  #hud { position: fixed; top: 10px; left: 10px; }
+  #hud .rec { color: #f33; }
+</style>
+</head>
+<body>
+<div id="hud"></div>
+<canvas id="view"></canvas>
+<video id="cam" playsinline muted hidden></video>
+<script>
+const MAX_DELAY_S = 3.0;
+
+const video = document.getElementById("cam");
+const canvas = document.getElementById("view");
+const ctx = canvas.getContext("2d");
+const hud = document.getElementById("hud");
+
+let delayS = 0.5;
+let sideBySide = true;
+let recorder = null;
+const buffer = []; // {t, bitmap}
+
+function delayedFrame(now) {
+  const target = now - delayS;
+  for (let i = buffer.length - 1; i >= 0; i--) {
+    if (buffer[i].t <= target) return buffer[i].bitmap;
+  }
+  return buffer[0].bitmap; // not enough history yet
+}
+
+function drawMirrored(img, x, w, h) {
+  ctx.save();
+  ctx.translate(x + w, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(img, 0, 0, w, h);
+  ctx.restore();
+}
+
+async function onFrame() {
+  const now = performance.now() / 1000;
+  buffer.push({ t: now, bitmap: await createImageBitmap(video) });
+  while (buffer.length > 1 && buffer[1].t < now - MAX_DELAY_S) buffer.shift().bitmap.close();
+
+  const w = video.videoWidth, h = video.videoHeight;
+  canvas.width = sideBySide ? w * 2 : w;
+  canvas.height = h;
+  if (sideBySide) {
+    drawMirrored(video, 0, w, h);
+    drawMirrored(delayedFrame(now), w, w, h);
+  } else {
+    drawMirrored(delayedFrame(now), 0, w, h);
+  }
+  hud.innerHTML = `delay ${(delayS * 1000).toFixed(0)}ms` + (recorder ? ' <span class="rec">REC</span>' : "");
+
+  video.requestVideoFrameCallback(onFrame);
+}
+
+function toggleRecording(stream) {
+  if (recorder) { recorder.stop(); recorder = null; return; }
+  const mimeType = ["video/mp4", "video/webm"].find(t => MediaRecorder.isTypeSupported(t));
+  const chunks = [];
+  recorder = new MediaRecorder(stream, { mimeType });
+  recorder.ondataavailable = e => chunks.push(e.data);
+  recorder.onstop = () => {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob(chunks, { type: mimeType }));
+    a.download = `session_${new Date().toISOString().replace(/[:.]/g, "-")}.${mimeType.split("/")[1]}`;
+    a.click();
+  };
+  recorder.start();
+}
+
+async function main() {
+  if (!navigator.mediaDevices) throw new Error(`camera API unavailable (secure context: ${isSecureContext}) - open via https://localhost:8443`);
+  const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480 }, audio: false });
+  video.srcObject = stream;
+  await video.play();
+  video.requestVideoFrameCallback(onFrame);
+
+  addEventListener("keydown", e => {
+    if (e.key === "[") delayS = Math.max(0, delayS - 0.05);
+    else if (e.key === "]") delayS = Math.min(MAX_DELAY_S, delayS + 0.05);
+    else if (e.key === "v") sideBySide = !sideBySide;
+    else if (e.key === "r") toggleRecording(stream);
+  });
+}
+
+main().catch(err => { hud.textContent = `Camera error: ${err.message}`; });
+</script>
+</body>
+</html>

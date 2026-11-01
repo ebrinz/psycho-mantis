@@ -1,0 +1,12 @@
+sh1.5|--fractions 0.25 0.5 1 --flow-smoothing 0.7 --blur 2 --sharpness 1.5
+sh2|--fractions 0.25 0.5 1 --flow-smoothing 0.7 --blur 2 --sharpness 2
+sh3|--fractions 0.25 0.5 1 --flow-smoothing 0.7 --blur 2 --sharpness 3
+s0.3|--fractions 0.25 0.5 1 --flow-smoothing 0.3 --blur 2
+b6|--fractions 0.25 0.5 1 --flow-smoothing 0.7 --blur 6
+s.5b4|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 4
+s.5b6|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 6
+s.5b4L4|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 4 --reach 19
+s.5b4L4f.5|--fractions 0.5 1 --flow-smoothing 0.5 --blur 4 --reach 19
+s.5b4sh2|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 4 --sharpness 2
+s.5b4L4sh2|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 4 --reach 19 --sharpness 2
+s.5b4L4sh3|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 4 --reach 19 --sharpness 3

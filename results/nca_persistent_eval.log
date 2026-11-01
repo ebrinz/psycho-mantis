@@ -1,0 +1,6 @@
+persistent NCA (6 steps/frame), one non-stop run through 5803 held-out frames (3.2 min), scored on 579 targets
+at 1 s: persistent +0.052  vs lineage step 15 (E23) +0.133  (same frames)  |  7.1 ms/frame (median, batch 1)
+  minute 1: persistent +0.049  lineage +0.100  state rms 0.147 (max 0.200)
+  minute 2: persistent +0.049  lineage +0.139  state rms 0.167 (max 0.227)
+  minute 3: persistent +0.058  lineage +0.137  state rms 0.157 (max 0.217)
+  minute 4: persistent +0.056  lineage +0.142  state rms 0.152 (max 0.183)

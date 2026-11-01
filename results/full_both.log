@@ -1,0 +1,21 @@
+min  1: model 4.414  copy-avg 4.569  copy-L 5.192  copy-R 5.114  skill vs copy-avg +0.034
+min  2: model 2.062  copy-avg 2.099  copy-L 2.510  copy-R 2.408  skill vs copy-avg +0.018
+min  3: model 1.234  copy-avg 1.257  copy-L 1.498  copy-R 1.584  skill vs copy-avg +0.018
+min  4: model 1.810  copy-avg 1.866  copy-L 2.059  copy-R 2.317  skill vs copy-avg +0.030
+min  5: model 5.027  copy-avg 5.066  copy-L 6.421  copy-R 5.461  skill vs copy-avg +0.008
+min  6: model 2.703  copy-avg 2.659  copy-L 3.084  copy-R 3.051  skill vs copy-avg -0.017
+min  7: model 1.453  copy-avg 1.456  copy-L 1.635  copy-R 1.970  skill vs copy-avg +0.002
+min  8: model 4.305  copy-avg 4.110  copy-L 4.563  copy-R 4.593  skill vs copy-avg -0.048
+min  9: model 3.081  copy-avg 3.082  copy-L 3.302  copy-R 3.781  skill vs copy-avg +0.000
+min 10: model 0.915  copy-avg 0.909  copy-L 1.197  copy-R 1.150  skill vs copy-avg -0.006
+min 11: model 1.640  copy-avg 1.667  copy-L 2.006  copy-R 2.053  skill vs copy-avg +0.016
+min 12: model 3.410  copy-avg 3.585  copy-L 4.328  copy-R 3.882  skill vs copy-avg +0.049
+min 13: model 2.775  copy-avg 2.900  copy-L 3.445  copy-R 3.300  skill vs copy-avg +0.043
+min 14: model 0.630  copy-avg 0.695  copy-L 0.977  copy-R 0.914  skill vs copy-avg +0.094
+min 15: model 3.714  copy-avg 3.866  copy-L 4.321  copy-R 4.660  skill vs copy-avg +0.039
+min 16: model 1.715  copy-avg 1.831  copy-L 2.096  copy-R 2.356  skill vs copy-avg +0.063
+
+both eyes, horizon 3, rate 1.0, 29284 frames in 87s
+MSE x1000: model 2.556 | copy-avg 2.601 | best single eye 3.037
+skill vs copy-avg +0.017 | vs best single eye +0.159
+last 3 min skill vs copy-avg +0.052

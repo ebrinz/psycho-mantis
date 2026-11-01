@@ -1,0 +1,8 @@
+s0r0.3|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6 --rate 0.3
+s0r0.1|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6 --rate 0.1
+s0r0.03|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6 --rate 0.03
+s0nm|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6 --no-model
+s.5nm|--fractions 0.25 0.5 1 --flow-smoothing 0.5 --blur 6 --no-model
+s0nm-sh2|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6 --no-model --sharpness 2
+s0r0.1-f.1|--fractions 0.1 0.25 0.5 1 --flow-smoothing 0 --blur 6 --rate 0.1
+s0r0.1-L0|--fractions 0.25 0.5 1 --flow-smoothing 0 --blur 6 --rate 0.1 --reach 15

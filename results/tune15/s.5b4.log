@@ -1,0 +1,30 @@
+min  1: skill vs copy-avg  model +0.014  precision +0.044  mix3 +0.109  mixN +0.168
+min  2: skill vs copy-avg  model -0.000  precision +0.042  mix3 +0.116  mixN +0.163
+min  3: skill vs copy-avg  model -0.013  precision +0.027  mix3 +0.149  mixN +0.218
+min  4: skill vs copy-avg  model -0.002  precision +0.044  mix3 +0.147  mixN +0.209
+min  5: skill vs copy-avg  model -0.019  precision +0.038  mix3 +0.105  mixN +0.159
+min  6: skill vs copy-avg  model -0.018  precision +0.060  mix3 +0.152  mixN +0.218
+min  7: skill vs copy-avg  model +0.011  precision +0.061  mix3 +0.194  mixN +0.256
+min  8: skill vs copy-avg  model -0.029  precision +0.047  mix3 +0.126  mixN +0.176
+min  9: skill vs copy-avg  model +0.011  precision +0.071  mix3 +0.151  mixN +0.204
+min 10: skill vs copy-avg  model -0.045  precision +0.035  mix3 +0.142  mixN +0.206
+min 11: skill vs copy-avg  model +0.002  precision +0.048  mix3 +0.150  mixN +0.215
+min 12: skill vs copy-avg  model +0.025  precision +0.058  mix3 +0.119  mixN +0.166
+min 13: skill vs copy-avg  model +0.029  precision +0.064  mix3 +0.166  mixN +0.222
+min 14: skill vs copy-avg  model +0.022  precision +0.057  mix3 +0.158  mixN +0.205
+min 15: skill vs copy-avg  model +0.062  precision +0.076  mix3 +0.150  mixN +0.192
+min 16: skill vs copy-avg  model +0.057  precision +0.072  mix3 +0.161  mixN +0.213
+
+both eyes, horizon 15, rate 1.0, 29284 frames in 197s
+MSE x1000: model 6.327 | precision 6.032 | copy_avg 6.378 | copy_left 6.799 | copy_right 6.828 | eyeflow 12.540 | mix3 5.490 | mixN 5.137
+skill vs copy-avg (summed MSE): model +0.008  precision +0.054  eyeflow -0.966  mix3 +0.139  mixN +0.195  (reach 17)
+mixN: fractions [0.25, 0.5, 1.0], flow smoothing 0.5, blur 4.0, sharpness 1.0; mixN better than mix3 on 71.7% of frames
+skill by half (first | second): mix3 +0.133 | +0.147  mixN +0.191 | +0.199
+frames where better than copy-avg: model 38.4%  precision 67.7%  mix3 73.7%
+
+by motion quintile (1 = stillest):
+  1: motion   0.135  model -0.796  precision -0.054  eyeflow -16.487  mix3 -0.093  mixN -0.110
+  2: motion   0.838  model -0.557  precision -0.065  eyeflow -5.437  mix3 -0.045  mixN +0.022
+  3: motion   2.851  model -0.128  precision +0.023  eyeflow -1.958  mix3 +0.090  mixN +0.163
+  4: motion   6.723  model +0.011  precision +0.056  eyeflow -0.875  mix3 +0.144  mixN +0.210
+  5: motion  19.071  model +0.085  precision +0.069  eyeflow -0.217  mix3 +0.163  mixN +0.212

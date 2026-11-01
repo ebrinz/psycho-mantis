@@ -1,0 +1,15 @@
+iter   100  train l1 x1000 38.109  held-out skill +0.100  136s
+iter   200  train l1 x1000 38.367  held-out skill +0.111  257s
+iter   300  train l1 x1000 38.415  held-out skill +0.118  379s
+iter   400  train l1 x1000 37.370  held-out skill +0.122  502s
+iter   500  train l1 x1000 37.452  held-out skill +0.128  624s
+iter   600  train l1 x1000 37.727  held-out skill +0.129  735s
+iter   700  train l1 x1000 38.172  held-out skill +0.136  845s
+iter   800  train l1 x1000 37.629  held-out skill +0.126  955s
+iter   900  train l1 x1000 37.043  held-out skill +0.132  1065s
+iter  1000  train l1 x1000 37.948  held-out skill +0.134  1181s
+iter  1100  train l1 x1000 38.451  held-out skill +0.142  1275s
+iter  1200  train l1 x1000 36.482  held-out skill +0.141  1368s
+iter  1300  train l1 x1000 38.251  held-out skill +0.141  1461s
+iter  1400  train l1 x1000 36.924  held-out skill +0.139  1555s
+iter  1500  train l1 x1000 38.073  held-out skill +0.140  1648s
